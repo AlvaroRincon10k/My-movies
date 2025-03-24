@@ -3,6 +3,7 @@ package com.example.mymovies
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.mymovies.databinding.ViewMovieItemBinding
 
 class MoviesAdapter(private val movies: List<Movie>) :
@@ -25,6 +26,7 @@ class MoviesAdapter(private val movies: List<Movie>) :
 
         fun bing(movie: Movie) {
             binding.title.text = movie.title
+            Glide.with(binding.root.context).load(movie.cover).into(binding.cover)
         }
     }
 }
