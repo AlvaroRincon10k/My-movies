@@ -3,9 +3,10 @@ package com.example.mymovies
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.example.mymovies.databinding.ActivityMainBinding
 import com.example.mymovies.model.MovieDbClient
-import kotlin.concurrent.thread
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,16 +19,11 @@ class MainActivity : AppCompatActivity() {
         }
         binding.recycler.adapter = moviesAdapter
 
-        thread {
+        lifecycleScope.launch {
             val apiKey = getString(R.string.api_key)
             val popularMovies = MovieDbClient.service.listPopularMovies(apiKey)
-            val body = popularMovies.execute().body()
-
-            runOnUiThread {
-                if (body != null)
-                    moviesAdapter.movies = body.results
-                moviesAdapter.notifyDataSetChanged()
-            }
+            moviesAdapter.movies = popularMovies.results
+            moviesAdapter.notifyDataSetChanged()
         }
     }
 }
