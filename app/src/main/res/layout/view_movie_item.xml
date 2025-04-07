@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:padding="2dp">
 
-    <ImageView
+    <com.example.mymovies.AspectRationImageView
         android:id="@+id/cover"
         android:layout_width="match_parent"
         android:layout_height="200dp"
@@ -15,7 +15,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:ratio="1.5" />
 
     <TextView
         android:id="@+id/title"
