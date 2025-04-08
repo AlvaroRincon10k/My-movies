@@ -6,10 +6,10 @@
     android:layout_height="wrap_content"
     android:padding="2dp">
 
-    <com.example.mymovies.AspectRationImageView
+    <com.example.mymovies.ui.common.AspectRationImageView
         android:id="@+id/cover"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         android:src="@mipmap/ic_launcher"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/title"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/design_default_color_primary"
         android:ellipsize="end"

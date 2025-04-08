@@ -1,4 +1,4 @@
-package com.example.mymovies
+package com.example.mymovies.ui.detail
 
 import android.os.Bundle
 import android.widget.TextView

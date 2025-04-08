@@ -1,12 +1,14 @@
-package com.example.mymovies
+package com.example.mymovies.ui.main
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.example.mymovies.R
 import com.example.mymovies.databinding.ActivityMainBinding
 import com.example.mymovies.model.Movie
 import com.example.mymovies.model.MovieDbClient
+import com.example.mymovies.ui.detail.DetailActivity
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {

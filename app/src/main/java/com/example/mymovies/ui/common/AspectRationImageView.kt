@@ -1,8 +1,8 @@
-package com.example.mymovies
+package com.example.mymovies.ui.common
 
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.ImageView
+import com.example.mymovies.R
 
 class AspectRationImageView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null
