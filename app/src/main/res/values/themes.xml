@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.MyMovies" parent="Base.Theme.MyMovies" />
+    
+    <style name="Theme.MyMovies.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+    </style>
 </resources>

@@ -22,6 +22,9 @@ class DetailActivity : AppCompatActivity() {
         val binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        setSupportActionBar(binding.toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val movie = intent.getParcelableExtra<Movie>(EXTRA_MOVIE)
         if (movie != null) {
             title = movie.title
